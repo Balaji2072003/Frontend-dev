@@ -1,71 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Balaji | Full Stack Developer</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body>
-    <h1><center>C.Balaji</center></h1>
-    <p><center>Web Developer|Java Fullstack Developer</center></p>
-    <br>
-    <img src="my photo.jpg"alt="my photo" width="300">
-    <p2>Navigation</p2>
-    <hr>
-    <div>
-    <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#all">Projects</a></li>
-        <li><a  href="#ball">Skills</a></li>
-        <li><a>Contact me</a></li>
 
-    </ul>
-    </div>
-    <hr>
-    <div id="about">
-        <h1>About Me</h1>
-        <p>Iam Balaji from kuppam engineering college i completed my graduation in the field of <br>
-        Electronics and Communication Engineering Present iam working as a Web developer in a company</p>
-    </div>
-    <hr>
-    <div id="all">
-        <h1>Projects</h1>
+  <!-- Header -->
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="logo.png" class="logo" alt="Logo">
         <ul>
-            <li>My portfolio</li>
-            <li>weather predict app</li>
-            <li>Smart calculator</li>
-            <li>Quiz app</li>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-    </div id=ball>
-    <hr>
-    <div>
-        <h1> Skills</h1>
-        <ol>
-            <li>Frontend Developer,BackendDeveloper</li>
-            <li>Java Developer</li>
-        </ol>
+      </nav>
+      <div id="header-text">
+        <p>Full Stack | MERN Stack Developer</p>
+        <h1>Hi, I'm Balaji</h1>
+      </div>
     </div>
-    <hr>
-    <div>
-        <h1>Technical Skills</h1>
-        <ol>
-            <li>html, css ,javaScript,java</li>
-            <li>sql, mysql, mongodb</li>
-        </ol>
-    </div>
-    <hr>
-    <div>
-        <h1>Contact me</h1>
-        
-<a href="mailto:chandranbalaji2143@gmail.com">click here to email me</a>
+  </div>
 
+  <!-- About Section -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="m.png.jpg" alt="Balaji">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>
+            I am a Full Stack and MERN Stack Developer skilled in HTML, CSS, JavaScript, React, Node.js, Express, and MongoDB. I enjoy creating efficient, scalable web applications and solving real-world problems through code.
+          </p>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
+            <p class="tab-links" onclick="opentab('experience', event)">Experience</p>
+            <p class="tab-links" onclick="opentab('education', event)">Education</p>
+          </div>
+
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Frontend</span><br>HTML, CSS, JavaScript, React</li>
+              <li><span>Backend</span><br>Node.js, Express.js</li>
+              <li><span>Database</span><br>MongoDB, MySQL</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>2025 - Present</span><br>Frontend Training at Apna College</li>
+              <li><span>2022 - 2025</span><br>Full Stack Trainee</li>
+              <li><span>2018 - 2019</span><br>Beginner & Learner</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>2026</span><br>B.Tech in Computer Science, Kuppam Engineering College — CGPA: 7.7</li>
+              <li><span>2022</span><br>Intermediate, Mallanur Junior College — 65%</li>
+              <li><span>2020</span><br>SSC, ZPHS Mallanur — 95%</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-    <div>
-        <form action=""method=post></form>
-        <label for="user name">Enter your name</label>
-        <input type="text"><br>
-        <label for
+  </div>
+
+  <!-- Services Section -->
+  <div id="services">
+    <div class="container">
+      <h1 class="sub-title">My Services</h1>
+      <div class="services-list">
+        <div>
+          <h2>Full Stack Development</h2>
+          <p>Developing modern, scalable web applications using frontend and backend technologies like HTML, CSS, JavaScript, Node.js, and MySQL.</p>
+          <a href="#">Learn more</a>
+        </div>
+        <div>
+          <h2>MERN Stack Development</h2>
+          <p>Building robust applications using MongoDB, Express.js, React, and Node.js with API integration and responsive UI/UX design.</p>
+          <a href="#">Learn more</a>
+        </div>
+      </div>
     </div>
-   
+  </div>
+
+  <!-- Contact Section -->
+  <div id="contact">
+    <div class="container">
+      <h1 class="sub-title">Contact Me</h1>
+      <p>Email: <a href="mailto:chandranbalaji2143@gmail.com">chandranbalaji2143@gmail.com</a></p>
+      <p>Phone: <a href="tel:7207822365">7207822365</a> / <a href="tel:6304822040">6304822040</a></p>
+    </div>
+  </div>
+
+  <!-- Tab Switching Script -->
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname, event) {
+      for (let tablink of tablinks) {
+        tablink.classList.remove("active-link");
+      }
+      for (let tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+
 </body>
 </html>
